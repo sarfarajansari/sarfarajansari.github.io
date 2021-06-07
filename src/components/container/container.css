@@ -1,0 +1,12 @@
+@media screen and (min-width:720px) {
+    .homecontainer1{
+        display: grid;
+        grid-template-columns: 60% 40%;
+        padding: 0;
+    }
+    .homecontainer2{
+        display: grid;
+        grid-template-columns: 40% 60%;
+        padding: 0;
+    }
+}

@@ -1,0 +1,51 @@
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+:root{
+  --pageColor:#eceef1;
+}
+body{
+  background-color: #eceef1;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+a{
+  text-decoration: none;
+  text-decoration-line: none;
+}
+.box-element {
+  box-shadow: hsl(0, 0%, 80%) 0 0 16px;
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+/* Main GRID */
+#App-grid{
+  display: grid;
+  grid-template-columns:1fr;
+  grid-template-rows: minmax(80px,auto) minmax(calc(90vh - 70px),auto) 1fr;
+  grid-template-areas:
+  "header" "content" "footer";
+}
+#header{
+  grid-area: header;
+}
+
+#footer{
+  grid-area: footer;
+  height: 20vh;
+}
+#content{
+  height: 200vh;
+  grid-area: content;
+}

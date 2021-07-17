@@ -46,6 +46,27 @@ a{
   height: 20vh;
 }
 #content{
-  height: 200vh;
+  min-height: 80vh;
   grid-area: content;
+}
+
+.any-container{
+  padding:0.3rem;
+}
+
+@media screen and (min-width:720px){
+  .any-container{
+    padding: 1rem 3%;
+  }
+}
+@media screen and (min-width:960px){
+  .any-container{
+    padding: 1rem 4%;
+  }
+}
+
+@media screen and (min-width:1080px){
+  .any-container{
+    padding: 2rem 5%;
+  }
 }

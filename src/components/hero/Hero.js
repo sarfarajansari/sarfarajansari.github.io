@@ -1,13 +1,49 @@
 import "./hero.css"
-
+var n=0
 const Hero = () => {
     return (
-        <div className="herocontainer" >
-            <h1>This is sarfaraj</h1>
-            <svg preserveAspectRatio="none" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" className="svg-wave" style={{fill: 'var(--pageColor)', width: '100%', height: 77, transform: 'rotate(180deg)',display:"block"}}>
-                <path d="M321.39 56.44c58-10.79 114.16-30.13 172-41.86 82.39-16.72 168.19-17.73 250.45-.39C823.78 31 906.67 72 985.66 92.83c70.05 18.48 146.53 26.09 214.34 3V0H0v27.35a600.21 600.21 0 00321.39 29.09z" />
-            </svg>
-        </div>
+        < >
+
+            <div className="herocontainer">
+                <div className="hero">
+                    <h1 className="intro">Hi! I'm <div>Sarfaraj Ansari</div></h1>
+                    <hr className="hr-text" data-content="AND" />
+                    <div className="label" style={{textAlign:"center"}}><h2>I <div className="sol"></div> solutions to <div className="apps"></div> web application</h2></div>
+                </div>
+            
+                <svg viewBox="0 0 1320 500">
+                <path fillOpacity="1" d="
+                    M0,192
+                    C220,100,440,100,660,192
+                    C880,290,1100,290,1320,192
+                    L1320 500
+                    L0 500
+                    " fill="#eceef1" />
+                {/* <path fillOpacity="0.7" d="
+                    M0,192
+                    C220,100,440,100,660,192
+                    C880,290,1100,290,1320,192
+                    L1320 500
+                    L0 500
+                    " fill="#fff" /> */}
+                {/* <path fillOpacity="0.7" d="
+                    M0,192
+                    C220,100,440,100,660,192
+                    C880,290,1100,290,1320,192
+                    L1320 500
+                    L0 500
+                    " fill="#ee5253" />
+                <path fillOpacity="0.7" d="
+                    M0,192
+                    C220,100,440,100,660,192
+                    C880,290,1100,290,1320,192
+                    L1320 500
+                    L0 500
+                    " fill="#00d2d3" /> */}
+                </svg>
+            </div>
+            
+        </>
 
     );
 }

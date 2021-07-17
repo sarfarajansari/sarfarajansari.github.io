@@ -1,4 +1,130 @@
+@keyframes changecolor{
+    0%{
+        color: rgb(255, 166, 151);
+    }
+    25%{
+        color:#828eff
+    }
+    50%{
+        color: rgb(252, 252, 59);
+    }
+    75%{
+        color:rgb(240, 131, 240)
+    }
+    100%{
+        color:var(--pageColor);
+    }
+}
+@keyframes pathAnim{
+	0%{
+		d: path("M0,192	C220,100,440,100,660,192 C880,290,1100,290,1320,192	L1320 500 L0 500");
+	}
+	25%{
+		d: path("M0,100	C220,100,440,292,660,292 C880,292,1100,100,1320,100	L1320 500 L0 500");
+	}
+	50%{
+		d: path("M0,192	C220,290,440,290,660,192 C880,100,1100,100,1320,192	L1320 500 L0 500");
+	}
+	75%{
+		d: path("M0,292	C220,292,440,100,660,100 C880,100,1100,292,1320,292	L1320 500 L0 500");
+	}
+	100%{
+		d: path("M0,192	C220,100,440,100,660,192 C880,290,1100,290,1320,192	L1320 500 L0 500");
+	}
+
+}
+@keyframes apps{
+    0%{
+        content:"Create";
+    }
+    25%{
+        
+        opacity: 0.4;
+    }
+    50%{
+        opacity: 1;
+        content:"Design";
+    }
+    75%{
+        opacity: 0.4;
+    }
+    100%{
+        opacity: 1;
+        content:"Build"
+    }
+}
+@keyframes solution{
+    0%{
+        content:"Invent";
+    }
+    25%{
+        opacity: 0.4;
+    }
+    50%{
+        opacity: 1;
+        content:"Engineer";
+    }
+    75%{
+        opacity:0.4;
+    }
+    100%{
+        opacity: 1;
+        content:"Discover"
+    }
+}
+.hr-text{
+    line-height:1em;
+    margin: 1rem 5%;
+}
+.label h1{
+    text-transform: uppercase;
+}
+.sol::after{
+    animation:solution 6s linear infinite alternate;
+    content:"";
+}
+.label .apps::after{
+    animation:apps 6s linear infinite alternate;
+    content:"";
+}
+
 .herocontainer{
     overflow:hidden;
-    background-color:blueviolet ;
+    background-color:#000b76 ;
+    color:  var(--pageColor);
+}
+.herocontainer svg path{
+    animation:pathAnim 7s; 
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+.herocontainer svg{
+    display:block;
+}
+
+
+.herocontainer .intro{
+    font-size: clamp(2.5rem,6vw,4rem);
+    text-transform: uppercase;
+    text-align: center;
+
+}
+.herocontainer .intro div{
+    animation: 5s changecolor infinite ease-in-out;
+    display: inline;
+}
+h1 div,h2 div{
+    display: inline;
+}
+.hero{
+    padding:2.5rem 5% 0 5%;
+}
+
+@media (min-width:720px){
+    .intro{
+        margin-top: 2rem;
+    }
+    .herocontainer .label{
+        padding-top: 5rem;
+    }
 }

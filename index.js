@@ -1,29 +1,33 @@
 gsap.registerPlugin(MotionPathPlugin, ScrollTrigger);
 
-function SingleScroll(props){
-  let Path = props.path;
+function SingleScroll(){
   const flightPath = {
-    path: Path,
+    path: "#path",
     curviness: 1.25,
     autoRotate: true,
   };
-  if (props.n % 2 === 0) {
-    Path.forEach((p, i) => {
-      p.x = -p.x;
-    });
-  }
 
-  gsap.to("#paper-plane" + String(props.n), {
+
+  gsap.to("#paper-plane", {
     scrollTrigger: {
-      trigger: "#container" + String(props.n),
+      trigger: "#trigger-element",
       scrub: true,
-      pin: true,
-      start: "top top",
+      // pin: true,
+      start: "-200px center",
+      markers:true,
     },
+    duration:3,
     ease: "none",
     motionPath: flightPath,
   });
 };
+
+document.addEventListener('DOMContentLoaded',()=>{
+  SingleScroll()
+})
+
+
+
 function Path(x, y){
   var ypercent = 700 / 100;
   var xpercent = window.innerWidth / 100;
@@ -48,11 +52,3 @@ let paths = [
   Path(100, 100),
 ];
 
-document.addEventListener('DOMContentLoaded',()=>{
-    for(var i = 1; i <=6;i++) {
-        SingleScroll({
-            n:i,
-            path:paths
-        })
-    }
-})

@@ -1,0 +1,13 @@
+.paper-plane-animation{
+    background-image: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%);
+}
+
+.paper-plane{
+    height: clamp(50px,15vw,70px);
+    position: absolute;
+    opacity: 0;
+}
+.paper-plane-animation div:nth-child(even) .paper-plane {
+    left:100%;
+}
+

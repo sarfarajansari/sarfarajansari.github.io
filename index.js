@@ -14,18 +14,19 @@ document.addEventListener('DOMContentLoaded',()=>{
       opacity: 1,
     };
   };
+  let factor = window.innerWidth<=725?-5:0
   let paths = [
-    Path(90, 20),
-    Path(90,10),
+    Path(90+factor, 20),
+    Path(90+factor,10),
 
-    Path(0,40),
-    Path(0,30),
+    Path(0 + factor,40),
+    Path(0 + factor,30),
 
-    Path(90, 60),
-    Path(90,50),
+    Path(90 + factor, 60),
+    Path(90 + factor,50),
 
-    Path(0,80),
-    Path(0,70),
+    Path(0 + factor,80),
+    Path(0 + factor,70),
 
     Path(70, 90),
     Path(100,70)

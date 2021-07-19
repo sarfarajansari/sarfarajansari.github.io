@@ -1,13 +1,36 @@
 .paper-plane-animation{
     background-image: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%);
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 2000px;
+    height: 100vh;
+}
+body{
+    overflow-x: hidden;
 }
 
 .paper-plane{
     height: clamp(50px,15vw,70px);
     position: absolute;
-    opacity: 0;
+    opacity: 1;
 }
-.paper-plane-animation div:nth-child(even) .paper-plane {
-    left:100%;
+
+.circle-svg{
+    position: absolute;
+}
+
+.circle-svg circle{
+    fill: rgb(81, 81, 97);
+}
+.flag svg{
+    fill: green;
+    font-size:clamp(50px,15vw,70px);
+}
+.flag{
+    opacity: 0;
+    transition: 350ms;
+}
+.flag.active{
+    opacity: 1;
 }
 

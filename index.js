@@ -1,6 +1,6 @@
 gsap.registerPlugin(MotionPathPlugin, ScrollTrigger);
 
-
+let showpaths=[]
 
 document.addEventListener('DOMContentLoaded',()=>{
   function Path(x, y){
@@ -33,6 +33,8 @@ document.addEventListener('DOMContentLoaded',()=>{
 
 
   ];
+  showpaths=paths;
+
   
   function SingleScroll(){
     const flightPath = {
@@ -67,6 +69,7 @@ const config ={
     end:"default"
   }}
   
+
 
 
 

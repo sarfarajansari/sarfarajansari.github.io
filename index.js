@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   function Path(x, y){
     var xpercent = window.innerWidth / 100;
     var h = document.getElementsByClassName("paper-plane-animation")[0].offsetHeight
-    ypercent =h/100
+    var ypercent =h/100
   
     return {
       x: x * xpercent,
@@ -30,8 +30,6 @@ document.addEventListener('DOMContentLoaded',()=>{
 
     Path(70, 90),
     Path(100,70)
-
-
   ];
   showpaths=paths;
 

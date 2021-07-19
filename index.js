@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     gsap.to("#paper-plane", {
       scrollTrigger: {
         trigger: "#trigger-element",
-        scrub:window.innerWidth<=725?0.4:2,
+        scrub:window.innerWidth<=725?0.1:2,
         pin: true,
         // markers:true,
       },

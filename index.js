@@ -1,46 +1,67 @@
 gsap.registerPlugin(MotionPathPlugin, ScrollTrigger);
 
-function Path(x, y){
-  var xpercent = 720 / 100;
 
-  return {
-    x: x * xpercent,
-    y: y ,
-    opacity: 1,
-  };
-};
-let paths = [
-  Path(0, 350),
-  Path(0, 700),
-  Path(0, 1050),
-  Path(0, 1400),
-  Path(0, 1750),
-  Path(0,2100),
-];
-
-function SingleScroll(){
-  const flightPath = {
-    path: paths,
-    curviness: 1.25,
-    autoRotate: true,
-  };
-
-
-  gsap.to("#paper-plane", {
-    scrollTrigger: {
-      trigger: "#trigger-element",
-      scrub:true,
-      // pin: true,
-      start: "top top",
-      // markers:true,
-    },
-    ease: "none",
-    motionPath: flightPath,
-  });
-  console.log(window.innerHeight)
-};
 
 document.addEventListener('DOMContentLoaded',()=>{
+  function Path(x, y){
+    var xpercent = window.innerWidth / 100;
+    var h = document.getElementsByClassName("paper-plane-animation")[0].offsetHeight
+    ypercent =h/100
+  
+    return {
+      x: x * xpercent,
+      y: y *ypercent,
+      opacity: 1,
+    };
+  };
+  let paths = [
+    Path(90, 20),
+    Path(90,10),
+
+    Path(0,30),
+    Path(0,20),
+
+    Path(90, 40),
+    Path(90,30),
+
+    Path(0,50),
+    Path(0,20),
+
+    Path(90, 60),
+    Path(90,40),
+
+    Path(0,70),
+    Path(0,50),
+
+    Path(90, 80),
+    Path(90,60),
+
+    Path(0,90),
+    Path(100,70),
+
+  ];
+  
+  function SingleScroll(){
+    const flightPath = {
+      path: paths,
+      curviness: 1.25,
+      autoRotate: true,
+    };
+  
+  
+    gsap.to("#paper-plane", {
+      scrollTrigger: {
+        trigger: "#trigger-element",
+        scrub:5,
+        pin: true,
+        // markers:true,
+      },
+      duration:10,
+      ease: "none",
+      motionPath: flightPath,
+    });
+    console.log(window.innerHeight)
+  };
   SingleScroll()
 })
 

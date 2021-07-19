@@ -18,26 +18,18 @@ document.addEventListener('DOMContentLoaded',()=>{
     Path(90, 20),
     Path(90,10),
 
+    Path(0,40),
     Path(0,30),
-    Path(0,20),
-
-    Path(90, 40),
-    Path(90,30),
-
-    Path(0,50),
-    Path(0,20),
 
     Path(90, 60),
-    Path(90,40),
+    Path(90,50),
 
+    Path(0,80),
     Path(0,70),
-    Path(0,50),
 
-    Path(90, 80),
-    Path(90,60),
+    Path(70, 90),
+    Path(100,70)
 
-    Path(0,90),
-    Path(100,70),
 
   ];
   
@@ -52,7 +44,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     gsap.to("#paper-plane", {
       scrollTrigger: {
         trigger: "#trigger-element",
-        scrub:5,
+        scrub:2,
         pin: true,
         // markers:true,
       },

@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded',()=>{
       opacity: 1,
     };
   };
-  let factor = window.innerWidth<=725?-25:0
+  let factor = window.innerWidth<=725?-10:0
   let paths = [
     Path(90+factor, 20),
     Path(90+factor,10),

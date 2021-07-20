@@ -45,11 +45,11 @@ document.addEventListener('DOMContentLoaded',()=>{
     gsap.to("#paper-plane", {
       scrollTrigger: {
         trigger: "#trigger-element",
-        scrub:window.innerWidth<=725?0.1:2,
+        scrub:window.innerWidth<=725?true:1,
         pin: true,
         // markers:true,
       },
-      duration:10,
+      duration:window.innerWidth<=725?3:5,
       ease: "none",
       motionPath: flightPath,
     });

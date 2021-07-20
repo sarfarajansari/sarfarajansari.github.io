@@ -1,0 +1,48 @@
+.date{
+    display:flex;
+    align-items: center;
+    position: relative;
+}
+.date p{
+    color: aliceblue;
+    padding: 0.3em 0.9rem;
+    background-color: rgb(9, 158, 42);
+}
+
+.date svg{
+    font-size: clamp(20px,1.8vw,32px);
+    fill: rgb(16, 17, 17);
+    height:unset;
+}
+.date-container{
+    display:inline-block;
+}
+
+
+
+.arrow{
+    transition: 350ms;
+}
+
+.arrow.right{
+    right: -100%;
+}
+.arrow.left{
+    left: -100%;
+}
+
+.arrow.right.active{
+    right:0;
+}
+.arrow.left.active{
+    left:0;
+}
+
+#trigger-element .arrow.active.detail#detail{
+    z-index: 6;
+    top: calc((100vh - 80px - 400px)/2);
+}
+
+.arrow.active.detail p{
+    background-color: rgb(17, 85, 31);
+}

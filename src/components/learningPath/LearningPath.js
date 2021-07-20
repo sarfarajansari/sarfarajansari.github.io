@@ -1,7 +1,9 @@
-import React,{ useState,useEffect,useRef} from 'react';
+import React,{ useState,useEffect} from 'react';
 import "./path.css";
 import PaperImage from "./paper.png";
-import {BsFillFlagFill} from "react-icons/bs"
+import Datestr from './date/date';
+import data from "./data"
+import Detail from "./details/detail"
 
 function useForceUpdate(){
   const [value, setValue] = useState(0); // integer state
@@ -9,29 +11,34 @@ function useForceUpdate(){
 }
 
 const LearningPath = () => {
-  const [Circles, setCircles] = useState([]);
+  const [active, setactive] = useState(-1);
   const [achievements, setachievements] = useState([]);
+  const right = [1,2,5,6]
   const forceUpdate =useForceUpdate()
 
   useEffect(() => {
     let factor = window.innerWidth<=725?-10:0
     let paths = [
-      Path(90+factor, 20),
-      Path(90+factor,10),
+      Path(95+factor, 20),
+      Path(95+factor,10),
   
       Path(0 ,40),
       Path(0 ,30),
   
-      Path(90 + factor, 60),
-      Path(90 + factor,50),
+      Path(95 + factor, 60),
+      Path(95 + factor,50),
   
       Path(0 ,80),
       Path(0 ,70),
     ];
 
-    paths.forEach((p)=>{
-      p.title=""
+    paths.forEach((p,i)=>{
       p.active = false;
+      p.title = data[i].title
+      p.date = data[i].date
+      p.img=data[i].img
+      p.detail = data[i].detail
+
     })
     setachievements(paths)
 
@@ -43,28 +50,10 @@ const LearningPath = () => {
     let y = ( rect.y-parent.getBoundingClientRect().y)+(rect.height/2)
     let x = plane.getBoundingClientRect().x +(rect.width/2)
 
-    let first={
-      x:x,
-      y:y,
-      r:2
-    }
-    setCircles([first])
     window.onscroll=()=>{
       rect = plane.getBoundingClientRect()
       y = ( rect.y-parent.getBoundingClientRect().y) + rect.height/2
       x = plane.getBoundingClientRect().x +(rect.width/2)
-      let f = Circles.filter((c)=>c.x<=x+7 && c.x>=x-7 && c.y<=y+7 && c.y>=y-7)
-      if(f.length===0 && window.innerWidth>=725){
-        let c = Circles
-        c.push({
-          x:x,
-          y:y,
-          r:2
-        })
-        setCircles(c)
-      }
-
-
       let achie = achievements.length===0?paths:achievements
       let fFactor = window.innerWidth/24
       achie.forEach((c)=>{
@@ -74,6 +63,9 @@ const LearningPath = () => {
         }
       })
       setachievements(achie)
+      document.getElementById("details").style.top="-100%";
+      setactive(-1)
+
     }
 
 
@@ -91,24 +83,44 @@ const LearningPath = () => {
       opacity: 1,
     };
   };
+
+  const pullDetail=(i)=>{
+    document.getElementById("details").style.top=0;
+    setactive(i)
+  }
   return (
     <div id="trigger-element" className="paper-plane-animation">
       <img
+        unselectable="on"
         id={"paper-plane"}
-        className="paper-plane"
+        className="paper-plane unselectable"
         src={PaperImage}
         alt="paperplane"
       />
+      
+      <div className="details" id="details">
+          <Detail body={achievements[active]}/>
+      </div>
 
-
-      <svg className="circle-svg" height={"100vh"} width={"100vw"}>
-        {Circles.map((circle)=>{
-            return <circle cx={circle.x} cy={circle.y} r={circle.r}/>
-          })}
-      </svg>
       <>
           {achievements.map((a,i)=>{
-            return <div className={a.active?"flag active flag" + String(i):"flag flag" + String(i)} style={{position:"absolute",top:String(a.y )+"px",left:String(a.x )+"px"}}><BsFillFlagFill /></div>
+            let classname =a.active?"arrow active right arrow" + String(i):"arrow right arrow" + String(i);
+            classname = i===active?classname + " detail":classname;
+            
+            return(
+              <>
+                  {right.includes(i+1)?<>
+                    <div  className={classname} style={{position:"absolute",top:String(a.y )+"px"}}>
+                      <Datestr onclick={()=>pullDetail(i)}  date={a.date} type={"right"} />
+                    </div>
+                    </>:<>
+                    <div className={classname.replace("right","left")} style={{position:"absolute",top:String(a.y )+"px"}}>
+                      <Datestr onclick={()=>pullDetail(i)} date={a.date} type={"left"} />
+                    </div>
+                    </>}
+
+              </>
+            )
           })}
       </>
 
@@ -118,13 +130,3 @@ const LearningPath = () => {
 
 export default LearningPath;
 
-const Path = (x, y) => {
-  let ypercent = 700 / 100;
-  let xpercent = window.innerWidth / 100;
-
-  return {
-    x: x * xpercent,
-    y: y * ypercent,
-    opacity: 1,
-  };
-};

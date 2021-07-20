@@ -1,0 +1,21 @@
+.detail-container{
+    position: absolute;
+    background-color: rgb(182, 184, 207);
+    min-height: 400px;
+    min-width:400px;
+    border-radius: 10px;
+    z-index: 5;
+}
+.detail-container.active{
+    z-index: 5;
+}
+
+
+.details{
+    position: relative;
+    height:100vh;
+    width:100vw;
+    top: -100%;
+    transition: 400ms;
+
+}

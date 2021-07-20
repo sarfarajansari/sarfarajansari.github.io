@@ -48,6 +48,8 @@ document.addEventListener('DOMContentLoaded',()=>{
         scrub:window.innerWidth<=725?0.4:1,
         pin: true,
         // markers:true,
+        
+        
       },
       duration:window.innerWidth<=725?3:5,
       ease: "none",

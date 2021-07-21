@@ -33,7 +33,7 @@ a{
 #App-grid{
   display: grid;
   grid-template-columns:1fr;
-  grid-template-rows: minmax(80px,auto) minmax(calc(90vh - 70px),auto) 1fr;
+  grid-template-rows: minmax(67px,auto) minmax(calc(90vh - 70px),auto) 1fr;
   grid-template-areas:
   "header" "content" "footer";
 }
@@ -44,7 +44,7 @@ a{
 #footer{
   grid-area: footer;
   height: 20vh;
-}
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);}
 #content{
   min-height: 80vh;
   grid-area: content;

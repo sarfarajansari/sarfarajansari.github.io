@@ -2,14 +2,16 @@ import React from 'react';
 import "./detail.css";
 
 const Detail = (props) => {
-    const top=(window.innerHeight-400 + 80)/2
-    const left=(window.innerWidth-400)/2
+    const top=window.innerWidth<=720?(window.innerHeight-420 + 80)/2:(window.innerHeight-500 + 80)/2
+    const left=window.innerWidth<=720?(window.innerWidth-370)/2:(window.innerWidth-500)/2
+
 
     const positive=(n)=>n>=0?n:0
     return (
-        <div id="detail" className={"detail-container box-element"} style={{top:positive(top),left:positive(left)}}>
+        <div id="detail" className={"detail-container box-element"} style={{top:"-100%",left:positive(left)}}>
             {props.body?<>
-                <h1>{props.body.title}</h1>
+                <h1 className="title">Title</h1>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;information</p>
             </>:<></>}
         </div>
     );

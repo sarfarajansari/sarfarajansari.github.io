@@ -76,7 +76,7 @@
     line-height:1em;
     margin: 1rem 5%;
 }
-.label h1{
+.label h1,h2{
     text-transform: uppercase;
 }
 .sol::after{

@@ -5,13 +5,13 @@
 }
 .date p{
     color: aliceblue;
-    padding: 0.3em 0.9rem;
+    padding:clamp(0.3rem,1vw,0.5rem) clamp(0.9rem,1.8vw,3rem) ;
     background-color: rgb(9, 158, 42);
 }
 
 .date svg{
-    font-size: clamp(20px,1.8vw,32px);
-    fill: rgb(16, 17, 17);
+    font-size: clamp(25px,2vw,40px);
+    fill: black;
     height:unset;
 }
 .date-container{
@@ -22,6 +22,7 @@
 
 .arrow{
     transition: 350ms;
+    cursor: pointer;
 }
 
 .arrow.right{
@@ -40,7 +41,6 @@
 
 #trigger-element .arrow.active.detail#detail{
     z-index: 6;
-    top: calc((100vh - 80px - 400px)/2);
 }
 
 .arrow.active.detail p{

@@ -59,13 +59,12 @@ const LearningPath = () => {
       achie.forEach((c)=>{
         if(c.x<=x+fFactor &&  c.y<=y+fFactor ){
           c.active=true
-
         }
       })
       setachievements(achie)
-      document.getElementById("details").style.top="-100%";
+      document.getElementById("detail").style.top="-100%";
       setactive(-1)
-
+      
     }
 
 
@@ -85,10 +84,12 @@ const LearningPath = () => {
   };
 
   const pullDetail=(i)=>{
-    document.getElementById("details").style.top=0;
+    document.getElementById("detail").style.top=String(window.innerWidth<=720?(window.innerHeight-400 + 80)/2:(window.innerHeight-500 + 80)/2) + "px";
     setactive(i)
   }
   return (
+    <>
+      <Detail body={achievements[active]}/>
     <div id="trigger-element" className="paper-plane-animation">
       <img
         unselectable="on"
@@ -98,8 +99,8 @@ const LearningPath = () => {
         alt="paperplane"
       />
       
-      <div className="details" id="details">
-          <Detail body={achievements[active]}/>
+      <div className="details" id="details" onKeyDown={()=>console.log("key down")} onKeyUp={()=>console.log("key up")}>
+          {/* <Detail body={achievements[active]}/> */}
       </div>
 
       <>
@@ -125,6 +126,7 @@ const LearningPath = () => {
       </>
 
     </div>
+    </>
   );
 };
 

@@ -2,6 +2,31 @@ gsap.registerPlugin(MotionPathPlugin, ScrollTrigger);
 
 let showpaths=[]
 
+function animateTitle(words,id){
+  let k=0
+  words.split(" ").forEach((word,i)=>{
+
+    word.split("").forEach((letter,j)=>{
+      k++
+      gsap.to("#word"+String(i)+"letter"+String(j),{
+        scrollTrigger:{
+          trigger:id,
+          scrub:1,
+          start:`${(k*15) +50}px center`,
+          // markers:true
+        },
+        animationDuration:3,
+        translateY:-700,
+        delay:j,
+        rotate:"90deg"
+      })
+      
+
+    })
+  })
+}
+
+
 document.addEventListener('DOMContentLoaded',()=>{
   function Path(x, y){
     var xpercent = window.innerWidth / 100;
@@ -58,17 +83,13 @@ document.addEventListener('DOMContentLoaded',()=>{
     console.log(window.innerHeight)
   };
   SingleScroll()
+  animateTitle("MY LEARNING PATH","#path-title")
+
+
+
 })
 
 
-const config ={
-    "720":{
-    scrub:true,
-    duration:3,
-    start: "-200px center",
-    end:"default"
-  }}
-  
 
 
 

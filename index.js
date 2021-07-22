@@ -11,11 +11,11 @@ function animateTitle(words,id){
       gsap.to("#word"+String(i)+"letter"+String(j),{
         scrollTrigger:{
           trigger:id,
-          scrub:1,
+          scrub:window.innerWidth<=725?0.1:1,
           start:`${(k*15) +50}px center`,
           // markers:true
         },
-        animationDuration:3,
+        duration:3,
         translateY:-700,
         delay:j,
         rotate:"90deg"

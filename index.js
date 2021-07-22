@@ -11,7 +11,7 @@ function animateTitle(words,id){
       gsap.to("#word"+String(i)+"letter"+String(j),{
         scrollTrigger:{
           trigger:id,
-          scrub:window.innerWidth<=725?0.01:1,
+          scrub:window.innerWidth<=725?1:1,
           start:`${(k*15) +50}px center`,
           // markers:true
         },

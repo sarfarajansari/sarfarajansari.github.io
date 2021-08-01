@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   };
   // SingleScroll()
   // animateTitle("MY LEARNING PATH","#path-title")
-  animateTitle("HAPPY FRIENDSHIP DAY SARFARAJ K DOSTO","#path-title")
+  animateTitle("HAPPY FRIENDSHIP DAY SARFARAJ K DOSTO :)","#path-title")
 
 
 

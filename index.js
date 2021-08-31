@@ -1,7 +1,7 @@
 gsap.registerPlugin(MotionPathPlugin, ScrollTrigger);
 
 document.addEventListener('DOMContentLoaded',()=>{
-  // animatePaperPlane()
+  animatePaperPlane()
   animateTitle("#path-title")
 })
 

@@ -9,9 +9,11 @@
 
 :root{
   --pageColor:#eceef1;
+  --clr1:#f82c15;
+  --clr2:#000b76;
 }
 body{
-  background-color: #eceef1;
+  background-color:var(--pageColor);
 }
 *{
   margin: 0;

@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 h1,h2,h3,h4,h5,h6,p,p1{
-    font-family:sans-serif;
+    font-family: 'Inter','Source Sans Pro', sans-serif;
 }
 .text{
     color: rgba(0,0,10,0.85);
@@ -26,3 +28,4 @@ p1{
 p{
     font-size:clamp(1.2rem,1.2vw,1.5rem)
 }
+

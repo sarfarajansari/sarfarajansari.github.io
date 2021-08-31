@@ -124,7 +124,7 @@ ul{
 }
 /* Menu-centent-style */
 .linkk:hover{
-    background-color: #c03b29;
+    background-color: var(--clr1);
 }
 span{
     margin-left: 16px;

@@ -1,20 +1,4 @@
-@keyframes changecolor{
-    0%{
-        color: rgb(255, 166, 151);
-    }
-    25%{
-        color:#828eff
-    }
-    50%{
-        color: rgb(252, 252, 59);
-    }
-    75%{
-        color:rgb(240, 131, 240)
-    }
-    100%{
-        color:var(--pageColor);
-    }
-}
+
 @keyframes pathAnim{
 	0%{
 		d: path("M0,192	C220,100,440,100,660,192 C880,290,1100,290,1320,192	L1320 500 L0 500");
@@ -35,7 +19,7 @@
 }
 @keyframes apps{
     0%{
-        content:"Create";
+        content:"CREATE";
     }
     25%{
         
@@ -43,54 +27,71 @@
     }
     50%{
         opacity: 1;
-        content:"Design";
+        content:"DESIGN";
     }
     75%{
         opacity: 0.4;
     }
     100%{
         opacity: 1;
-        content:"Build"
+        content:"BUILD"
     }
 }
 @keyframes solution{
     0%{
-        content:"Invent";
+        content:"INVENT";
     }
     25%{
         opacity: 0.4;
     }
     50%{
         opacity: 1;
-        content:"Engineer";
+        content:"ENGINEER";
     }
     75%{
         opacity:0.4;
     }
     100%{
         opacity: 1;
-        content:"Discover"
+        content:"DISCOVER"
     }
 }
+
+@keyframes typeWriter{
+    to{
+        left: 100%;
+    }
+}
+
+@keyframes popUp {
+    to{opacity: 1;}
+}
+
+@keyframes pop-in-up {
+    to{opacity: 1;transform: translateY(0);}
+}
+
 .hr-text{
     line-height:1em;
     margin: 1rem 5%;
 }
-.label h1,h2{
+.label h1{
     text-transform: uppercase;
 }
 .sol::after{
-    animation:solution 6s linear infinite alternate;
+    animation:solution 6s linear infinite ;
     content:"";
+    text-transform: lowercase;
 }
 .label .apps::after{
-    animation:apps 6s linear infinite alternate;
+    animation:apps 6s linear infinite ;
     content:"";
+    text-transform: lowercase;
 }
 
 .herocontainer{
     overflow:hidden;
-    background-color:#000b76 ;
+    background-color:var(--clr2) ;
     color:  var(--pageColor);
 }
 .herocontainer svg path{
@@ -102,17 +103,34 @@
     display:block;
 }
 
+.type-writer{
+    display: grid;
+    place-content: center;
+}
 
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Nova+Mono&display=swap');
 .herocontainer .intro{
+    position:relative;
     font-size: clamp(2.5rem,6vw,4rem);
     text-transform: uppercase;
     text-align: center;
+    font-weight: 500;
+    padding: 0;
+    font-family: 'Nova Mono','Major Mono Display', monospace ;
+}
 
-}
-.herocontainer .intro div{
-    animation: 5s changecolor infinite ease-in-out;
-    display: inline;
-}
+
+
+
+
+
+
+
+
+
+
+
+
 h1 div,h2 div{
     display: inline;
 }
@@ -123,8 +141,32 @@ h1 div,h2 div{
 @media (min-width:720px){
     .intro{
         margin-top: 2rem;
+        font-family: 'Major Mono Display','Nova Mono', monospace !important;
+        white-space: nowrap;
     }
     .herocontainer .label{
-        padding-top: 5rem;
+        padding-top: 2rem;
+    }
+    .herocontainer .intro::before,.herocontainer .intro::after{
+        content: "";
+        position: absolute;
+        inset: 0;
+        animation: typeWriter 7s  1s steps(23) forwards;
+    }
+    .herocontainer .intro::before{
+        background-color:var(--clr2);
+    }
+    .herocontainer .intro::after{
+        opacity: 0;
+        width:7px;
+        background-color:hsl(240, 100%, 70%);
+        margin: 0.3rem 0 0.1rem 0;;
+        animation: typeWriter 7s  1s steps(23) forwards, popUp 155ms 59 alternate;
+        
+    }
+    .pop-in-up{
+        opacity: 0;
+        transform: translateY(10rem);
+        animation:pop-in-up 2s 5s forwards;
     }
 }

@@ -4,15 +4,18 @@
     position: relative;
 }
 .date p{
-    color: aliceblue;
+    color: var(--clr1);
     padding:clamp(0.3rem,1vw,0.5rem) clamp(0.9rem,1.8vw,3rem) ;
-    background-color: rgb(9, 158, 42);
+    background-color: white;
+    box-shadow: -3px 3px 3px rgba(207, 198, 198, 0.3);
+
 }
 
 .date svg{
     font-size: clamp(25px,2vw,40px);
     fill: black;
     height:unset;
+    text-shadow: 1px 1px 2px rgb(184, 97, 97);
 }
 .date-container{
     display:inline-block;
@@ -44,5 +47,5 @@
 }
 
 .arrow.active.detail p{
-    background-color: rgb(17, 85, 31);
+    background-color: var(--clr2);
 }

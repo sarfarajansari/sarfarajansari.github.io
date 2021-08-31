@@ -16,7 +16,9 @@ function App() {
         </div>
         <div id="content">
           <Hero />
-          <Title text="MY LEARNING PATH" id="path-title" />
+          <div className="animated-title-container-outer">
+            <Title text="MY LEARNING PATH" id="path-title" />
+          </div>
           <LearningPath />
           <Switch></Switch>
         </div>

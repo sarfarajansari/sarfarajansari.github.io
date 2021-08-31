@@ -167,6 +167,6 @@ h1 div,h2 div{
     .pop-in-up{
         opacity: 0;
         transform: translateY(10rem);
-        animation:pop-in-up 2s 5s forwards;
+        animation:pop-in-up 2s 7s forwards;
     }
 }

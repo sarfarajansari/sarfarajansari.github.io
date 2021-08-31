@@ -4,10 +4,9 @@
     position: relative;
 }
 .date p{
-    color: var(--clr1);
+    color: var(--clr2l2);
     padding:clamp(0.3rem,1vw,0.5rem) clamp(0.9rem,1.8vw,3rem) ;
     background-color: white;
-    box-shadow: -3px 3px 3px rgba(207, 198, 198, 0.3);
 
 }
 
@@ -47,5 +46,25 @@
 }
 
 .arrow.active.detail p{
-    background-color: var(--clr2);
+    background-color: var(--clr2l5);
+    color: var(--clr2l1);
+    position: relative;
+    z-index: 3000;
+}
+
+
+.triangle{
+    --triangle-width:35px;
+    width:0;
+    height:0;
+}
+.triangle.left{
+    border-top: var(--triangle-width) solid transparent;
+    border-bottom: var(--triangle-width) solid transparent;
+    border-left: var(--triangle-width) solid var(--clr2l5);
+}
+.triangle.right{
+    border-top: var(--triangle-width) solid transparent;
+    border-bottom: var(--triangle-width) solid transparent;
+    border-right: var(--triangle-width) solid var(--clr2l5);
 }

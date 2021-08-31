@@ -9,8 +9,26 @@
 
 :root{
   --pageColor:#eceef1;
+
   --clr1:#f82c15;
-  --clr2:#000b76;
+  --clr1l1:hsl(6, 94%, 10%);
+  --clr1l2:hsl(6, 94%, 25%);
+  --clr1l3:hsl(6, 94%, 40%);
+  --clr1l4:hsl(6, 94%, 55%);
+  --clr1l5:hsl(6, 94%, 65%);
+  --clr1l6:hsl(6, 94%, 80%);
+  --clr1l7:hsl(6, 94%, 90%);
+  
+  --clr2:hsl(234, 100%, 23%);
+  --clr2l1:hsl(234, 100%,  10%);
+  --clr2l2:hsl(234, 100%,  25%);
+  --clr2l3:hsl(234, 100% , 40%);
+  --clr2l4:hsl(234, 100%,  55%);
+  --clr2l5:hsl(234, 100%,  65%);
+  --clr2l6:hsl(234, 100%,  80%);
+  --clr2l7:hsl(234, 100%,  90%);
+
+  
 }
 body{
   background-color:var(--pageColor);
@@ -71,4 +89,10 @@ a{
   .any-container{
     padding: 2rem 5%;
   }
+}
+
+.animated-title-container-outer{
+  min-height: 40vh;
+  display:grid;
+  align-items:center;
 }

@@ -23,7 +23,12 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/MotionPathPlugin.min.js" integrity="sha512-TCWIV57O10riZ8jjGxGdx7BNNGydl57F4y8+EIK8szMou/flyNCRogOhFIMEDmD7NuAsfWoraH2VNAwHq7aFrA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/MotionPathPlugin.min.js"
+      integrity="sha512-TCWIV57O10riZ8jjGxGdx7BNNGydl57F4y8+EIK8szMou/flyNCRogOhFIMEDmD7NuAsfWoraH2VNAwHq7aFrA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script
       data-ad-client="ca-pub-2656261897464995"
       async
@@ -58,6 +63,9 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-    <script src="%PUBLIC_URL%/index.js"></script>
+    <script>
+      gsap.registerPlugin(MotionPathPlugin, ScrollTrigger);
+      window.gsap = gsap;
+    </script>
   </body>
 </html>

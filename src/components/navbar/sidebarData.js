@@ -3,7 +3,7 @@ export const sidebarData =[
     
     {
         title:'Home',
-        path:"/#about",
+        path:"/",
         cName:'nav-text'
     },
     {
@@ -18,7 +18,7 @@ export const sidebarData =[
     },
     {
         title:'About',
-        path:"/#about",
+        path:"/about",
         cName:'nav-text'
     },
     

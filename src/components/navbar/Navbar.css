@@ -161,7 +161,7 @@ span{
         color: salmon;
     }
     .menu-bars.active{
-        color: rgb(177, 37, 13);
+        color:salmon;
     }
     .nav-box-element {
         box-shadow: hsl(0, 0%, 60%) 0 0 8px;

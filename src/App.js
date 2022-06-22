@@ -3,8 +3,7 @@ import "./components/typography/typography.css";
 import Navbar from "./components/navbar/Navbar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Hero from "./components/hero/Hero";
-import Title from "./components/animatedTitle/title";
-import LearningPath from "./components/learningPath/LearningPath";
+import AnimatedTitle from "./components/animatedTitle/animatedTitle";
 
 function App() {
   return (
@@ -17,9 +16,9 @@ function App() {
         <div id="content">
           <Hero />
           <div className="animated-title-container-outer">
-            <Title text="MY LEARNING PATH" id="path-title" />
+            <AnimatedTitle titleText="ABOUT ME" />
           </div>
-          <LearningPath />
+          <div style={{ height: 500 }} />
           <Switch></Switch>
         </div>
         <div id="footer"></div>

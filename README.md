@@ -215,28 +215,22 @@
 <div style="flex: 1 1 45%; border: 1px solid #ddd; padding: 15px; border-radius: 8px;">
     <h2><a href="https://github.com/sarfarajansari/edutube?tab=readme-ov-file#edutube-">Edutube 🎓📺</a></h2>
     <p><strong>Edutube</strong> is an innovative educational platform designed to make learning more interactive and accessible through YouTube videos.</p>
-    <img src="https://github.com/user-attachments/assets/cdbd1afa-cc41-4427-b102-98396bede21c" alt="Edutube Video" width="100%">
+    <video width="100%" controls>
+        <source src="https://github.com/user-attachments/assets/cdbd1afa-cc41-4427-b102-98396bede21c" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
 </div>
 
 <div style="flex: 1 1 45%; border: 1px solid #ddd; padding: 15px; border-radius: 8px;">
     <h2><a href="https://github.com/sarfarajansari/legalSphere.Web?tab=readme-ov-file#legalsphere-%EF%B8%8F">LegalSphere ⚖️</a></h2>
     <p><strong>LegalSphere</strong> is an AI-driven research engine designed to provide in-depth legal case analysis.</p>
-    <img src="https://github.com/user-attachments/assets/fda8f169-9176-4aa7-9e1a-26fb93d99157" alt="LegalSphere Video" width="100%">
+    <video width="100%" controls>
+        <source src="https://github.com/user-attachments/assets/fda8f169-9176-4aa7-9e1a-26fb93d99157" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
 </div>
 
-<div style="flex: 1 1 45%; border: 1px solid #ddd; padding: 15px; border-radius: 8px;">
-    <h2><a href="https://github.com/sarfarajansari/garbageRedressal?tab=readme-ov-file#garbage-redressal-system">Garbage Redressal System</a></h2>
-    <p>The <strong>Garbage Redressal System</strong> is a React application that enables people to report waste management issues by submitting photos.</p>
-    <img src="https://github.com/user-attachments/assets/6533b2f7-19f2-4738-986b-7a2ac28e3e96" alt="Garbage Redressal Video" width="100%">
-</div>
-
-<div style="flex: 1 1 45%; border: 1px solid #ddd; padding: 15px; border-radius: 8px;">
-    <h2><a href="https://github.com/sarfarajansari/human-detection-model-deployment?tab=readme-ov-file#human-detection-model-deployment">Human Detection Model Deployment</a></h2>
-    <p>This repository contains the deployment setup for a human detection model built by the AI club in my college.</p>
-    <img src="https://github.com/user-attachments/assets/dacc8fbe-96cc-4757-afee-e14c8d9a8064" alt="Human Detection Model Video" width="100%">
-</div>
-
-<!-- Add more projects following the same structure -->
+<!-- Repeat for other projects -->
 
 </div>
 

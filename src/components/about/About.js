@@ -22,10 +22,10 @@ export default function About({ innerRef }) {
           </span>
           <ul className="about-list">
             <li>
-              🔭 Full-stack developer with 3+ years in scalable app development
+              🔭 Full-stack AI Engineer with 3+ years in scalable app development
             </li>
             <li>
-              🌱 Skilled in React, Ionic, Node.js, Python, Flask, FastAPI,
+              🌱 Skilled in Pytorch, React, Node.js, Python, Flask, FastAPI,
               Django
             </li>
             <li>
@@ -44,7 +44,7 @@ export default function About({ innerRef }) {
             <li>
               😍 Built AI apps, workflow automation, and various side projects
             </li>
-            <li>😉 Some ML/DL experience (TensorFlow); now learning PyTorch</li>
+            <li>😉 Some ML/DL experience with Pytorch</li>
           </ul>
         </p>
       </>

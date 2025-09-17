@@ -100,7 +100,7 @@ export const info = {
   firstName: "Sarfaraj",
   lastName: "Ansari",
   initials: "SA", // the example uses first and last, but feel free to use three or more if you like.
-  position: "a Full Stack Developer",
+  position: "a Full Stack AI Engineer",
   selfPortrait: self, // don't change this unless you want to name your self-portrait in the "img" folder something else!
   gradient: `-webkit-linear-gradient(135deg, ${colors})`, // don't change this either
   baseColor: colors[0],
@@ -115,7 +115,7 @@ export const info = {
     },
     {
       emoji: "💼",
-      text: "Full Stack Developer at Settyl Corporation",
+      text: "Full Stack AI Engineer at Settyl",
     },
     // {
     //     emoji: "🌱",
@@ -127,7 +127,7 @@ export const info = {
     // },
     {
       emoji: "😉",
-      text: "got some knowledge of ML and DL with tensorflow, currently learning pytorch",
+      text: "Built some ML/DL projects with Pytorch",
     },
     {
       emoji: "📧",
@@ -178,7 +178,7 @@ export const info = {
   portfolio: [
     {
       title: "Edutube",
-      live: "https://sarfaraj.site/edutube",
+      live: "/edutube",
       source: "https://github.com/sarfarajansari/edutube",
       image: "/projects/edutube.png",
       readme:
@@ -193,7 +193,7 @@ export const info = {
     },
     {
       title: "Garbage Redressal System",
-      live: "https://sarfaraj.site/garbageRedressal",
+      live: "/garbageRedressal",
       source: "https://github.com/sarfarajansari/garbageRedressal",
       image: "/projects/garbage.png",
       readme:
@@ -210,7 +210,7 @@ export const info = {
     
     {
       title: "Gauss - Scientific Calculator",
-      live: "https://gauss.sarfaraj.site",
+      // live: "https://gauss.sarfaraj.site",
       source: "https://github.com/sarfarajansari/gaussianEliminationANM",
       image: "/projects/gauss.png",
       readme:
@@ -228,7 +228,7 @@ export const info = {
 
     {
       title: "Marvelous Ludo",
-      live: "https://sarfaraj.site/ludo",
+      live: "/ludo",
       source: "https://github.com/sarfarajansari/ludo",
       image: "/projects/ludo.png",
 
@@ -237,7 +237,7 @@ export const info = {
     },
     {
       title: "AI Club Website",
-      live: "https://sarfaraj.site/aiclub",
+      live: "/aiclub",
       source: "https://github.com/sarfarajansari/aiclub",
       image: "/projects/aiclub.png",
 
@@ -246,7 +246,7 @@ export const info = {
     },
     {
       title: "Visual Voice",
-      live: "https://sarfaraj.site/visualvoice",
+      live: "/visualvoice",
       source: "https://github.com/sarfarajansari/visualvoice",
       image: "/projects/visualvoice.png",
       reame:
@@ -255,7 +255,7 @@ export const info = {
    
     {
       title: "The Awesome Store",
-      live: "https://sarfaraj.site/Ecommerce",
+      live: "/Ecommerce",
       source: "https://github.com/sarfarajansari/Ecommerce",
       image: "/projects/ecommerce.png",
       readme:
@@ -264,7 +264,7 @@ export const info = {
 
     {
       title: "Tic Tac Toe",
-      live: "https://sarfaraj.site/tictactoe",
+      live: "/tictactoe",
       source: "https://github.com/sarfarajansari/tictactoe",
       image: "/projects/tictactoe.png",
       readme:
@@ -272,7 +272,7 @@ export const info = {
     },
     {
       title: "Drag Drop From Scratch",
-      live: "https://sarfaraj.site/drag-drop",
+      live: "/drag-drop",
       source: "https://github.com/sarfarajansari/drag-drop",
       image: "/projects/dragdrop.png",
       readme:
@@ -299,7 +299,7 @@ export const info = {
     },
     {
       title: "Todo App",
-      live: "https://sarfaraj.site/todo",
+      live: "/todo",
       source: "https://github.com/sarfarajansari/todo",
       image: "/projects/todo.png",
       readme:
